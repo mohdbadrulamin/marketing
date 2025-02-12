@@ -24,10 +24,16 @@ body {
 }
 
 .hero {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2A2E33 100%);
     color: white;
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
+}
+
+.hero-stats {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
 .cta-button {
@@ -62,6 +68,44 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.success-stories {
+    padding: 80px 0;
+    background: white;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.story-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.story-role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 10px 0;
 }
 
 .signup {
