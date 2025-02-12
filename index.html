@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Investing with Robinhood</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W85CL8CY6Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W85CL8CY6Z', {
+            'page_title': document.title,
+            'page_path': window.location.pathname,
+            'custom_map': {
+                'dimension1': 'user_type',
+                'dimension2': 'section_name'
+            }
+        });
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="hero">
+    <header class="hero" data-section="hero">
         <div class="container">
             <h1>Start Your Investment Journey Today</h1>
             <p>Join millions of smart investors building their wealth</p>
@@ -15,7 +30,7 @@
         </div>
     </header>
 
-    <section class="money-matters">
+    <section class="money-matters" data-section="money-matters">
         <div class="container">
             <h2>Why Smart Money Grows Faster</h2>
             <div class="money-grid">
@@ -31,7 +46,7 @@
         </div>
     </section>
 
-    <section class="benefits">
+    <section class="benefits" data-section="benefits">
         <div class="container">
             <h2>Why Choose Us</h2>
             <div class="benefits-grid">
@@ -51,10 +66,10 @@
         </div>
     </section>
 
-    <section class="signup">
+    <section class="signup" data-section="signup">
         <div class="container">
             <h2>Join Our Community</h2>
-            <form id="signup-form">
+            <form id="signup-form" data-track="signup-form">
                 <input type="email" placeholder="Enter your email">
                 <button type="submit">Sign Up</button>
             </form>
