@@ -1,0 +1,10 @@
+/Website
+├── assets/
+│   ├── images/
+│   └── styles/
+│       ├── components/
+│       └── sections/
+├── components/
+├── sections/
+├── scripts/
+└── index.html

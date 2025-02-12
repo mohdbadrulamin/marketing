@@ -1,22 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Thumbnail click handling
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const mainImage = document.getElementById('mainImage');
-
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
-            mainImage.src = this.src;
-        });
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true
     });
 
-    // Add to cart button
-    const addToCartBtn = document.querySelector('.add-to-cart');
-    addToCartBtn.addEventListener('click', function() {
-        const accountType = document.getElementById('size').value;
-        if (!accountType) {
-            alert('Please select an account type');
-            return;
-        }
-        window.location.href = 'https://robinhood.com/signup';
+    // Smooth scroll
+    window.scrollToSignup = function() {
+        document.getElementById('signup').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    };
+
+    // Form handling
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        window.location.href = 'https://robinhood.com/signup?affiliate=verbital';
     });
 });
