@@ -2,10 +2,9 @@
     --primary-color: #00C805;
     --secondary-color: #1E2124;
     --text-color: #333;
-    --light-bg: #f8f9fa;
+    --light-bg: #f9f9f9;
 }
 
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -24,241 +23,86 @@ body {
     padding: 0 20px;
 }
 
-/* Hero Section */
 .hero {
+    background: var(--secondary-color);
+    color: white;
+    padding: 100px 0;
     text-align: center;
-    padding: 60px 0;
-    background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-}
-
-.hero-cta {
-    margin: 40px 0;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Buttons and CTAs */
-.primary-button {
+.cta-button {
     background: var(--primary-color);
     color: white;
     border: none;
     padding: 15px 30px;
-    border-radius: 8px;
+    border-radius: 25px;
     font-size: 1.1rem;
-    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s ease;
 }
 
-.primary-button:hover {
+.cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 200, 5, 0.2);
 }
 
-/* Benefits Section */
-.benefits {
+.money-matters, .benefits {
     padding: 80px 0;
-    background: white;
+    background: var(--light-bg);
 }
 
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.benefit-card {
-    padding: 30px;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.benefit-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Money Matters Section */
-.money-matters {
-    padding: 80px 0;
-    background: var(--secondary-color);
-    color: white;
-}
-
-.money-grid {
+.money-grid, .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
-.money-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-}
-
-/* Features Section */
-.features {
-    padding: 80px 0;
-    background: var(--light-bg);
-}
-
-.feature-item img {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-/* Success Stories Section */
-.success-stories {
-    padding: 80px 0;
-    background: var(--light-bg);
-}
-
-.story-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.story-card {
+.money-card, .benefit-card {
     background: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
-.story-card img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-    object-fit: cover;
-    border: 3px solid var(--primary-color);
-}
-
-.story-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
-    margin: 20px 0;
-}
-
-.story-timeline {
-    font-size: 0.9rem;
-    color: #666;
-    font-style: italic;
-}
-
-/* Journey Section */
-.journey {
-    padding: 80px 0;
-    background: white;
-}
-
-.journey-timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.timeline-item {
-    position: relative;
-    padding: 30px;
-    background: var(--light-bg);
-    border-radius: 12px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.timeline-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-/* Testimonial Section */
-.testimonial {
-    max-width: 800px;
-    margin: 60px auto;
-    text-align: center;
-    padding: 40px;
-    background: var(--light-bg);
-    border-radius: 12px;
-}
-
-.testimonial blockquote {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    font-style: italic;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-}
-
-.testimonial cite {
-    display: block;
-    margin-top: 20px;
-    color: #666;
-}
-
-/* Signup Section */
 .signup {
     padding: 80px 0;
-    background: white;
+    text-align: center;
 }
 
-.signup-form {
-    max-width: 500px;
-    margin: 0 auto;
+#signup-form {
+    margin-top: 30px;
 }
 
-.signup-form input,
-.signup-form select {
-    width: 100%;
+#signup-form input {
     padding: 15px;
-    margin-bottom: 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-right: 10px;
 }
 
-/* Footer */
-.footer {
-    padding: 40px 0;
+footer {
     background: var(--secondary-color);
     color: white;
+    padding: 40px 0;
 }
 
-/* Responsive Design */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .benefits-grid {
-        grid-template-columns: 1fr;
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 }
